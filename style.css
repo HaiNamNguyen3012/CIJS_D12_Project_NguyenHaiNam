@@ -1,0 +1,502 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+#app{
+    width: 100%;
+    height: 100vh;
+}
+
+/* trang đăng nhập và đăng ký */
+.login,
+.register{
+    width: 100%;
+    height: 100%;
+    background: url('./image/background-login.jpg') center center/cover;
+}
+.input-group{
+    margin:10px 0;
+}
+
+.input-group.has-error input{
+    border:1px solid red;
+    color:red;
+    outline:red;
+}
+.error-msg{
+    font-size:12px;
+    font-style:italic;
+    color: red;
+}
+
+.input-group input{
+    padding:5px 8px;
+    margin:3px 0;
+    width:100%;
+    border-radius: 5px;
+    border:1px solid #555;
+}
+.containerChildren{
+    position: absolute;
+    top: 25%;
+    left: 43%;
+    max-width: 750px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 25px;
+    border-radius: 10px;
+}
+.login button,
+.register button{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 7px;
+    background-color: #1FBF57;
+}
+
+/* Header */
+header{
+    width: 100%;
+    height: auto;
+}
+header .up{
+    width: 100%;
+    height: auto;
+    display: flex;
+    padding: 20px;
+    font-size: 30px;
+    border-bottom: 1px solid #f4f4f1;
+}
+header .up .logo{
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 7px;
+}
+header .up .logo:hover{
+    color: #1FBF57;
+}
+header .up .search{
+    flex: 5;
+} 
+
+header .up .search input{
+    padding: 10px;
+    width: 95%;
+    height: 100%;
+    background-color: #f4f4f1;
+    border: 0.1px solid black;
+    border-radius: 5px;
+    margin-left: 2.5%;
+}
+
+header .up .other{
+    flex: 2;
+    text-align: center;
+    margin-top: 7px;
+}
+
+
+header .up .other span{
+    margin: 0 10px;
+}
+
+header .up .other span.chat:hover,
+header .up .other span.cart:hover{
+    color: #1FBF57;
+}
+
+header .down{
+    background-color: #f4f4f1;
+    height: 50px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    text-align: center;
+}
+
+header .down span{
+    height: 100%;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+header .down span:hover{
+    color: #1FBF57;
+}
+
+header button{
+    background-color: #1FBF57;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+}
+
+header button:hover{
+    background-color: #168C40;
+    border: none;
+    border-radius: 5px;
+    color: #ffffff;
+    padding: 10px;
+    
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    width: 100%;
+    height: 50px;
+    margin: auto;
+    background-color: #000;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+/* home */
+
+.home{
+    width: 100%;
+    height: 100%;
+}
+
+.home .advertisement{
+    width: 100%;
+    height: 450px;
+    border: 1px solid  rgb(233, 233, 233);
+    background: url('./image/advertisement.jpeg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .advertisement .slogan{
+    font-size: 50px;
+    background-color: #1FBF57;
+}
+
+.home .main_content{
+    width: 80%;
+    height: auto;
+    margin: auto;
+}
+
+.home .main_content .most_sneakers{
+    width: 100%;
+}
+.home .main_content .most_sneakers .main_title,
+.home .main_content .trending_apparels .main_title{
+    font-size: 30px;
+    margin: 10px 0;
+}
+.home .main_content .most_sneakers .product,
+.home .main_content .trending_apparels .product{
+    display: flex;
+}
+
+.home .main_content .most_sneakers .product .product_group,
+.home .main_content .trending_apparels .product .product_group{
+    width: 23%;
+    height: 400px;
+    margin-right: 2%;
+    margin-bottom: 20px;
+    background-color: 1px solid rgb(207, 207, 207);
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    text-align: center;
+}
+.home .main_content .most_sneakers .product .product_group img,
+.home .main_content .trending_apparels .product .product_group img{
+    width: 100%;
+    height: 300px;
+}
+
+
+
+/* chat */
+.h-screen{
+    height:100vh;
+}
+.flex-col{
+    flex-direction: column;
+}
+
+.btn-link{
+    font-size: 12px;
+    color: blue;
+    cursor: pointer;
+}
+
+.modal-container{
+    background-color: rgba(0,0,0,.3);
+    position: fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal-content{
+    padding:10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.flex{
+    display: flex;
+}
+
+.items-center{
+    align-items: center;
+}
+.items-stretch{
+    align-items: stretch;
+}
+
+.flex-1{
+    flex:1 1 50px;
+}
+
+.conversation-item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 5px;
+    margin: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.conversation-item:hover{
+    background-color: lightgray;
+}
+.conversation-item.active {
+    background-color: blue;
+    color: white;
+}
+.title-bar{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ececec;
+    padding:5px 10px;
+}
+.message-item{
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ececec;
+    background-color: lightgray;
+    margin: 5px;
+}
+.message-item>.sender{
+    font-size: 10px;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 3px;
+}
+
+.message-item.my-message{
+    background-color: darkblue;
+    color: white;
+}
+.message-item.my-message > .sender{
+    color: lightgray;
+}
+
+ul li{
+    list-style-type: none;
+}
+
+/* product */
+.similar_product{
+    width: 100%;
+    height: 100%;
+}
+
+.similar_product .main_content{
+    max-width: 1170px;
+    margin: auto;
+}
+
+.similar_product .main_content .topic{
+    height: 270px;
+    background: url(./image/header-sneakers.jpg);
+    margin: 20px 0;
+}
+
+.similar_product .main_content .topic .topicText{
+    height: 100%;
+    width: 30%;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+}
+
+.similar_product .main_content .topic .topicText h1{
+    margin-bottom: 20px;
+}
+
+.similar_product .main_content .main{
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-top: 10px;
+}
+
+.similar_product .main_content .main .filter{
+    width: 20%;
+}
+.similar_product .main_content .main .filter .filter_group{
+    border-bottom: 2px solid black;
+    margin: 20px 0;
+    padding-bottom: 15px;
+}
+
+.similar_product .main_content .main .product{
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.similar_product .main_content .main .product .product_group{
+    width: 23%;
+    height: 300px;
+    margin: 0 1%;
+    margin-bottom: 20px;
+    background-color: 1px solid rgb(207, 207, 207);
+    border: 1px solid rgb(207, 207, 207);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.similar_product .main_content .main .product .product_group img{
+    width: 100%;
+    height: 200px;
+}
+/* product detail */
+.product_detail{
+    width: 100%;
+    height: 100vh;
+}
+
+.product_detail .details{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+.product_detail .details .left{
+    flex: 1;
+    line-height: 2;
+}
+.product_detail .details .left .information{
+    width: 100%;
+    height: 50px;
+}
+.product_detail .details .left .information span{
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 25px;
+    color: #006340;
+    margin-right: 10px;
+}
+
+.product_detail .details .left img{
+    width: 80%;
+}
+
+.product_detail .details .right{
+    flex: 1;
+}
+
+.product_detail .details .right .size{
+    width: 98%;
+    height: 75%;
+    margin-left: 2%;
+    margin-top: 10%;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.product_detail .details .right .size select{
+    width: 100%;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.product_detail .details .right .size .buy,
+.product_detail .details .right .size .sell{
+    width: 100%;
+    height: 40%;
+    border-top: 1px solid black;
+    display: flex;
+    padding-top:10px;
+}
+
+.product_detail .details .right .size .buy button{
+    width: 20%;
+    height: 60px;
+    padding: 10px;
+    margin: 5px 5px 10px 0;
+    background-color: #006340;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.product_detail .details .right .size .sell button{
+    width: 20%;
+    height: 60px;
+    padding: 10px;
+    margin: 5px 5px 10px 0;
+    background-color: #DA2C16;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+.product_detail .details .right .size .buy p,
+.product_detail .details .right .size .sell p{
+    padding-top:  5px;
+}
+
+.product_information{
+    max-width: 1200px;
+    margin: auto;
+    margin-top: 20px;
+    border-top: 1px solid black;
+}
+.product_information span{
+    display: inline-block;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.product_information .detail span{
+    background-color: #fff;
+    color: #000;
+    display: inline-block;
+    width: 100%;
+}
